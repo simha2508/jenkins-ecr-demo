@@ -42,7 +42,7 @@ pipeline {
                     curl -f http://localhost:5001/health
                 '''
             }
-
+        }
         stage('ECR Login') {
             steps {
                 echo 'Authenticating with AWS ECR'
