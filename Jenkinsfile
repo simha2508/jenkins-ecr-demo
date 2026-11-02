@@ -42,14 +42,6 @@ pipeline {
                     curl -f http://localhost:5001/health
                 '''
             }
-            post {
-                always {
-                    sh '''
-                        docker rm -f flask-test-${BUILD_NUMBER} || true
-                    '''
-                }
-            }
-        }
 
         stage('ECR Login') {
             steps {
